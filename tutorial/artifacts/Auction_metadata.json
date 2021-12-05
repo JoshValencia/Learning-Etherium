@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.0+commit.c7dfd78e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "bid",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "bids",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/10 - Mapping.sol": "Auction"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/10 - Mapping.sol": {
+			"keccak256": "0xd6a621774a8d6c13ef35d23d6535e368ee8b3c14d1e3610342a352a2674d62c9",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://ff03bde1b2b5f9a843c7c21594db8fe49d5146b4d530f7c236fe6b9969761593",
+				"dweb:/ipfs/QmZoho3K7BYJkysh5YthoRZ7zavLcgA9A2584ZYbq3QYu4"
+			]
+		}
+	},
+	"version": 1
+}

@@ -16,6 +16,31 @@
 					{
 						"indexed": true,
 						"internalType": "address",
+						"name": "tokenOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "tokens",
+						"type": "uint256"
+					}
+				],
+				"name": "Approval",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
 						"name": "from",
 						"type": "address"
 					},
@@ -28,7 +53,7 @@
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "value",
+						"name": "tokens",
 						"type": "uint256"
 					}
 				],
@@ -39,7 +64,55 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "account",
+						"name": "tokenOwner",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					}
+				],
+				"name": "allowance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokens",
+						"type": "uint256"
+					}
+				],
+				"name": "approve",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "tokenOwner",
 						"type": "address"
 					}
 				],
@@ -47,7 +120,7 @@
 				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "balance",
 						"type": "uint256"
 					}
 				],
@@ -75,7 +148,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "decimal",
+				"name": "decimals",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -142,12 +215,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "recipient",
+						"name": "to",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "tokens",
 						"type": "uint256"
 					}
 				],
@@ -155,7 +228,36 @@
 				"outputs": [
 					{
 						"internalType": "bool",
-						"name": "",
+						"name": "success",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokens",
+						"type": "uint256"
+					}
+				],
+				"name": "transferFrom",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "success",
 						"type": "bool"
 					}
 				],
@@ -191,11 +293,11 @@
 	},
 	"sources": {
 		"token/token.sol": {
-			"keccak256": "0xe0b8a1005155611790ff1eb6b628ec3e3d5ea120cdff82b2528eda6605a8a985",
+			"keccak256": "0x89e2915a9f7943dbed82a70a51d2bfae3d010fde1834f546c25c11aa4d18f4cf",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://b1876983153d2b10bfc8a219a43acd713cc5aaf3116217d37d10a1f8e1a77329",
-				"dweb:/ipfs/QmVPEh4eu7XwaenrmwWJVDXhqCHmSg7sr7FPEHj9H5oJuM"
+				"bzz-raw://9e79000d3cb9ae7bdb60855c32507349070522e11cfa68f5609aa222fabe69b5",
+				"dweb:/ipfs/QmXmwn4te5W1UjP4HecoApyMFGv4Vw12DWH1ov2KmFTBGQ"
 			]
 		}
 	},

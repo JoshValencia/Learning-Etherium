@@ -18,5 +18,5 @@ contract BaseContract{
 }
 
 contract A is BaseContract{
-    
+    int public y = 3;
 }

@@ -158,4 +158,8 @@ contract CryptosICO is Cryptos{
 
         return true;
     }
+
+    receive() payable external{
+        invest();
+    }
 }

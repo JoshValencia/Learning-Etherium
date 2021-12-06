@@ -477,6 +477,10 @@
 				],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -507,11 +511,11 @@
 	},
 	"sources": {
 		"token/token.sol": {
-			"keccak256": "0x6c885990125c5e509e20e83bd5d3975240b11cbd430508a95631bf79b769a411",
+			"keccak256": "0x726d473d467a9125221bc8c327732e074d2c9577641fda3c38f71d1d877511b3",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://c22e3fe01185347175a0f4fb40d9dff98286f5dea34d10ec0fa4e114eea32b6e",
-				"dweb:/ipfs/QmeUzX8QsCuddEmq71kBHPsoBJbV727pkcWfpg8HWSZtZX"
+				"bzz-raw://bf49c9a2069503bdfbf707409e77b340d886b5586ae56d98e09c5a6d41110634",
+				"dweb:/ipfs/QmWUMnAaAxV15d2iQa5N8CUj54xVGej33dbGdPHpR3Pnt3"
 			]
 		}
 	},

@@ -293,11 +293,11 @@
 	},
 	"sources": {
 		"token/token.sol": {
-			"keccak256": "0xc6a3f7750a67f341a83c1c7c979771a9178184ab604891d32760d08df65b1777",
+			"keccak256": "0xe39271d8bb0e579076788f34d81325571ee02a5ddc8ec73468bd9e3a9b11498d",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://63f772cdb74563ed2de7735560294de3036d1cac1d19ea1288ffcd73c1b70ac6",
-				"dweb:/ipfs/QmYrf9zczhifQv2cSKF7MJk7nha2u39ePUponh2hKXfV5M"
+				"bzz-raw://0daee212c9ed933f10e4b700f1b27e0eb1d9587b3467f0227285138fd18afa3c",
+				"dweb:/ipfs/QmUo2jG726HLkbYaHWBEWRJRUyfX17Va6bf54izG4Wq8NF"
 			]
 		}
 	},

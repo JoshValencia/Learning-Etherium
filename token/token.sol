@@ -46,7 +46,7 @@ contract Cryptos is ERC20Interface{
     }
     
     
-    function transfer(address to, uint tokens) public override returns(bool success){
+    function transfer(address to, uint tokens) public virtual override returns(bool success){
         require(balances[msg.sender] >= tokens);
         
         balances[to] += tokens;
@@ -73,7 +73,7 @@ contract Cryptos is ERC20Interface{
     }
     
     
-    function transferFrom(address from, address to, uint tokens) public override returns (bool success){
+    function transferFrom(address from, address to, uint tokens) public virtual override returns (bool success){
          require(allowed[from][to] >= tokens);
          require(balances[from] >= tokens);
          
@@ -142,6 +142,7 @@ contract CryptosICO is Cryptos{
     event Invest(address investor, uint value, uint tokens);
 
     function invest () payable public returns(bool){
+        icoState = getCurentState();
         require(icoState == State.running);
 
         require(msg.value >= minInvestment && msg.value <= maxInvestment);
@@ -161,5 +162,24 @@ contract CryptosICO is Cryptos{
 
     receive() payable external{
         invest();
+    }
+
+    function transfer(address to, uint tokens) public override returns(bool success){
+        require(block.timestamp > tokenTradeStart);
+        super.transfer(to, tokens);
+        return true;
+    }
+
+    function transferFrom(address from, address to, uint tokens) public override returns (bool success){
+        require(block.timestamp > tokenTradeStart);
+        super.transferFrom(from, to, tokens);
+        return true;
+    }
+
+    function burn() public returns(bool){
+        icoState = getCurentState();
+        require(icoState == State.afterEnd);
+        balances[founder] = 0;
+        return true;
     }
 }

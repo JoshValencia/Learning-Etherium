@@ -88,9 +88,9 @@ contract Cryptos is ERC20Interface{
 contract CryptosICO is Cryptos{
     address public admin;
     address payable public deposit;
-    uint tokenPrice = 10000000000000000 wei; 
+    uint tokenPrice = 10000000000000000; 
     //1 Cryptos = 0.01 BNB 1 BNB = 100 Cryptos
-    uint public hardCap = 300000000000000000000 wei; //300 BNB
+    uint public hardCap = 300000000000000000000 ; //300 BNB
     uint public raisedAmount;
     uint public saleStart = block.timestamp;
     //if want to add 1 hour (block.timestamp + 3600 seconds [1 hour])
@@ -98,8 +98,8 @@ contract CryptosICO is Cryptos{
     //604800 seconds = 1 week
     uint public tokenTradeStart = saleEnd + 604800;
     //Tokens will be transferrable after 1 week (604800)
-    uint public maxInvestment = 2000000000000000000 wei; // 2 BNB
-    uint public minInvestment = 100000000000000000 wei; // 0.1 BNB
+    uint public maxInvestment = 2000000000000000000 ; // 2 BNB
+    uint public minInvestment = 100000000000000000 ; // 0.1 BNB
 
     enum State {beforeStart, running, afterEnd, halted}
     State public icoState;
